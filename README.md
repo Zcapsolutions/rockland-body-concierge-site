@@ -4,4 +4,4 @@ Generated public landing-page assets for GitHub Pages. The full source project i
 
 Quote requests and damage photos are saved by the private Cloudflare backend. This repository contains no submissions, private photos, owner password, or backend secrets.
 
-The page is published by the GitHub Pages workflow when these generated assets are updated on `main`.
+GitHub Pages publishes the page when these generated assets are updated on `main`.
