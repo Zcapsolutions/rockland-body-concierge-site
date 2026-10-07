@@ -177,6 +177,7 @@
 
 .honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.estimate-section button:disabled{opacity:.65;cursor:wait}.estimate-section .preview-feedback.success{background:#e8f5eb;color:#194c29}
 .repair-captions{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.repair-captions h3{font-size:20px;margin-bottom:8px}.repair-captions p{font-size:15px}@media(max-width:560px){.repair-captions{grid-template-columns:1fr;gap:18px}}
+.estimate-section input[type=date]{display:block;width:100%;padding:10px 12px;border:1px solid #cfd8e5;border-radius:6px;background:white;font:inherit;font-size:14px;min-height:42px}
 </style>
 </head>
 <body>
@@ -356,8 +357,8 @@
 
 <section class="estimate-section" id="estimate"><div class="form-layout wrap"><div class="form-intro"><h2>GET YOUR REPAIR ESTIMATE</h2><p><strong>Upload a few photos. We'll respond the same day.</strong></p><p class="note">No obligation. Rockland County drivers only.</p><p class="note">Questions? <a href="tel:+18456719979">Call</a> or <a href="sms:+18456719979">text</a> Zalmy at <a href="tel:+18456719979">845-671-9979</a></p></div><form class="form-card" id="estimate-form" onsubmit="return false">
 <noscript><p>Please enable JavaScript to send this form, or call/text Zalmy at 845-671-9979.</p></noscript><div class="grid"><div class="field"><label for="name">Name*</label><input id="name" name="name" type="text" autocomplete="name" required maxlength="100"></div><div class="field"><label for="estimate-phone">Phone*</label><input id="estimate-phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30"></div></div><div class="field" style="margin-top:16px"><label for="town">Town / ZIP*</label><input id="town" name="town" type="text" autocomplete="address-level2" required maxlength="100"></div><div class="field-label">Vehicle Year / Make / Model*</div><div class="vehicle-grid"><div class="field"><label class="optional" for="year">Year</label><input id="year" name="year" type="number" min="1900" max="2027" required placeholder="2024"></div><div class="field"><label class="optional" for="make">Make</label><input id="make" name="make" type="text" required maxlength="80" placeholder="Toyota"></div><div class="field"><label class="optional" for="model">Model</label><input id="model" name="model" type="text" required maxlength="80" placeholder="Camry"></div></div><div class="field" style="margin-top:16px"><label for="trim">Trim <span class="optional">(Optional)</span></label><input id="trim" name="trim" type="text" placeholder="SE, SEL, Limited" maxlength="80"></div>
-<fieldset><legend>Vehicle Status</legend><div class="status"><label><input type="radio" name="vehicleStatus" value="owned">Owned</label><label><input type="radio" name="vehicleStatus" value="financed">Financed</label><label><input type="radio" name="vehicleStatus" value="leased">Leased</label></div></fieldset><div class="field" id="lease-field" hidden><label for="leaseRemaining">If leased, how much time is left?</label><input id="leaseRemaining" disabled name="leaseRemaining" type="text" placeholder="e.g. 6 months" maxlength="80"></div><div class="field"><label for="damage">Tell us about the damage*</label><textarea id="damage" name="damage" required minlength="5" maxlength="2700"></textarea></div>
-<fieldset><legend>Can the car be driven?*</legend><div class="status"><label><input type="radio" name="drivable" value="yes" required>Yes</label><label><input type="radio" name="drivable" value="no">No</label><label><input type="radio" name="drivable" value="unsure">Not sure</label></div></fieldset><div class="field"><label for="photos">Upload Photos*</label><div class="upload" id="photo-zone"><input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple required aria-describedby="photo-help"><p class="note" id="photo-help">Choose photos or drag them here.<br>JPG, PNG, or WebP · Up to 6 photos · 5 MB each · 20 MB total</p><div class="photo-preview" id="photo-preview"></div></div></div><fieldset><legend>Already have a repair estimate?*</legend><div class="status"><label><input type="radio" name="hasQuote" value="yes" required>Yes</label><label><input type="radio" name="hasQuote" value="no">No</label></div></fieldset><div class="field"><label for="existingEstimate">Already have an estimate? <span class="optional">(Optional)</span></label><div class="upload"><input id="existingEstimate" name="existingEstimate" type="file" accept="image/jpeg,image/png,image/webp"><p class="note">Upload a photo or screenshot of your estimate (JPG, PNG, or WebP). Up to 6 images and 20 MB total across both uploads; 5 MB per image.</p></div></div><div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><p id="file-error" class="error" role="alert" hidden></p><button class="btn btn-primary" type="submit">GET MY REPAIR ESTIMATE</button><p class="privacy"><strong>No obligation. Your information and photos are used to review your request and coordinate your repair. Submitting does not schedule pickup or authorize work.</strong></p><p class="privacy">Questions? <a href="tel:+18456719979">Call</a> or <a href="sms:+18456719979">text</a> Zalmy at <a href="tel:+18456719979">845-671-9979</a><br><em>Rockland County drivers only.</em></p><div class="preview-feedback" id="submit-feedback" role="status" tabindex="-1" hidden></div>
+<fieldset><legend>Vehicle Status</legend><div class="status"><label><input type="radio" name="vehicleStatus" value="owned">Owned</label><label><input type="radio" name="vehicleStatus" value="financed">Financed</label><label><input type="radio" name="vehicleStatus" value="leased">Leased</label></div></fieldset><div class="field" id="lease-field" hidden><label for="leaseEnd">When does your lease end?</label><input id="leaseEnd" name="leaseEnd" type="date" disabled></div><fieldset><legend>Do you plan on selling the car?</legend><div class="status"><label><input type="radio" name="plansToSell" value="yes">Yes</label><label><input type="radio" name="plansToSell" value="no">No</label><label><input type="radio" name="plansToSell" value="unsure">Not sure</label></div></fieldset><div class="field" id="sale-field" hidden><label for="saleTiming">In how long do you plan to sell it?</label><input id="saleTiming" name="saleTiming" type="text" placeholder="e.g. 3 months, next year" maxlength="80" disabled></div><div class="field"><label for="damage">Tell us about the damage*</label><textarea id="damage" name="damage" required minlength="5" maxlength="2700"></textarea></div>
+<fieldset><legend>Can the car be driven?*</legend><div class="status"><label><input type="radio" name="drivable" value="yes" required>Yes</label><label><input type="radio" name="drivable" value="no">No</label><label><input type="radio" name="drivable" value="unsure">Not sure</label></div></fieldset><div class="field"><label for="photos">Upload Photos*</label><div class="upload" id="photo-zone"><input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple required aria-describedby="photo-help"><p class="note" id="photo-help">Choose photos or drag them here.<br>JPG, PNG, or WebP · Up to 6 photos · 5 MB each · 20 MB total</p><div class="photo-preview" id="photo-preview"></div></div></div><fieldset><legend>Already have a repair estimate?*</legend><div class="status"><label><input type="radio" name="hasQuote" value="yes" required>Yes</label><label><input type="radio" name="hasQuote" value="no">No</label></div></fieldset><div id="quote-fields" hidden><div class="field"><label for="quoteAmount">Current quote amount ($)*</label><input id="quoteAmount" name="quoteAmount" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" placeholder="e.g. 4000" disabled></div><div class="field"><label for="existingEstimate">Upload your estimate <span class="optional">(Optional)</span></label><div class="upload"><input id="existingEstimate" name="existingEstimate" type="file" disabled accept="image/jpeg,image/png,image/webp"><p class="note">Upload a photo or screenshot of your estimate (JPG, PNG, or WebP). Up to 6 images and 20 MB total across both uploads; 5 MB per image.</p></div></div></div><div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><p id="file-error" class="error" role="alert" hidden></p><button class="btn btn-primary" type="submit">GET MY REPAIR ESTIMATE</button><p class="privacy"><strong>No obligation. Your information and photos are used to review your request and coordinate your repair. Submitting does not schedule pickup or authorize work.</strong></p><p class="privacy">Questions? <a href="tel:+18456719979">Call</a> or <a href="sms:+18456719979">text</a> Zalmy at <a href="tel:+18456719979">845-671-9979</a><br><em>Rockland County drivers only.</em></p><div class="preview-feedback" id="submit-feedback" role="status" tabindex="-1" hidden></div>
 </form></div></section>
 
   <!-- FINAL CTA -->
@@ -388,10 +389,14 @@ const form=document.getElementById('estimate-form'),photos=document.getElementBy
 const allowedTypes=['image/jpeg','image/png','image/webp'];
 let previewUrls=[],busy=false,requestId=crypto.randomUUID();
 document.getElementById('year').max=String(new Date().getFullYear()+1);
-function setLeaseState(){const leased=form.elements.vehicleStatus.value==='leased';document.getElementById('lease-field').hidden=!leased;document.getElementById('leaseRemaining').disabled=!leased;}
-form.addEventListener('change',e=>{if(e.target.name==='vehicleStatus')setLeaseState();});
+function setLeaseState(){const leased=form.elements.vehicleStatus.value==='leased';document.getElementById('lease-field').hidden=!leased;document.getElementById('leaseEnd').disabled=!leased;}
+function setSaleState(){const selling=form.elements.plansToSell.value==='yes';document.getElementById('sale-field').hidden=!selling;document.getElementById('saleTiming').disabled=!selling;}
+function setQuoteState(){const hasQuote=form.elements.hasQuote.value==='yes';document.getElementById('quote-fields').hidden=!hasQuote;document.getElementById('quoteAmount').disabled=!hasQuote;document.getElementById('quoteAmount').required=hasQuote;estimate.disabled=!hasQuote;}
+function setFormState(){setLeaseState();setSaleState();setQuoteState();}
+form.addEventListener('change',e=>{if(e.target.name==='vehicleStatus')setLeaseState();if(e.target.name==='plansToSell')setSaleState();if(e.target.name==='hasQuote'){setQuoteState();checkPhotos();}});
+function estimateFiles(){return form.elements.hasQuote.value==='yes'?Array.from(estimate.files):[];}
 function checkPhotos(){
- const damageFiles=Array.from(photos.files),files=[...damageFiles,...Array.from(estimate.files)];
+ const damageFiles=Array.from(photos.files),files=[...damageFiles,...estimateFiles()];
  const invalid=files.length>6||files.some(f=>f.size>5*1024*1024||!allowedTypes.includes(f.type))||files.reduce((n,f)=>n+f.size,0)>20*1024*1024;
  const message=invalid?'Choose up to 6 JPG, PNG, or WebP images in total, under 5 MB each and 20 MB combined.':'';
  fileError.textContent=message;fileError.hidden=!invalid;photos.setCustomValidity(message);
@@ -400,7 +405,7 @@ function checkPhotos(){
  return !invalid;
 }
 photos.addEventListener('change',checkPhotos);
-estimate.addEventListener('change',()=>{if(estimate.files.length)form.querySelector('[name="hasQuote"][value="yes"]').checked=true;checkPhotos();});
+estimate.addEventListener('change',()=>{if(estimate.files.length)form.querySelector('[name="hasQuote"][value="yes"]').checked=true;setQuoteState();checkPhotos();});
 const zone=document.getElementById('photo-zone');
 zone.addEventListener('dragover',e=>{e.preventDefault();if(!busy)zone.classList.add('dragging');});
 zone.addEventListener('dragleave',()=>zone.classList.remove('dragging'));
@@ -414,11 +419,13 @@ function buildRequest(){
  const details=[form.elements.damage.value.trim()];
  if(form.elements.trim.value.trim())details.push('Vehicle trim: '+form.elements.trim.value.trim());
  if(form.elements.vehicleStatus.value)details.push('Vehicle status: '+form.elements.vehicleStatus.value);
- if(form.elements.vehicleStatus.value==='leased'&&form.elements.leaseRemaining.value.trim())details.push('Lease time remaining: '+form.elements.leaseRemaining.value.trim());
- if(estimate.files.length){data.set('hasQuote','yes');details.push('An existing repair estimate is attached as the final image.');}
- data.set('damage',details.join('\n'));data.set('quoteAmount','');
+ if(form.elements.vehicleStatus.value==='leased'&&form.elements.leaseEnd.value)details.push('Lease end date: '+form.elements.leaseEnd.value);
+ if(form.elements.plansToSell.value)details.push('Plans to sell the car: '+form.elements.plansToSell.value);
+ if(form.elements.plansToSell.value==='yes'&&form.elements.saleTiming.value.trim())details.push('Planned sale timing: '+form.elements.saleTiming.value.trim());
+ if(estimateFiles().length){data.set('hasQuote','yes');details.push('An existing repair estimate is attached as the final image.');}
+ data.set('damage',details.join('\n'));data.set('quoteAmount',form.elements.hasQuote.value==='yes'?form.elements.quoteAmount.value:'');
  Array.from(photos.files).forEach(file=>data.append('photos',file));
- Array.from(estimate.files).forEach(file=>data.append('photos',file));
+ estimateFiles().forEach(file=>data.append('photos',file));
  return data;
 }
 form.addEventListener('submit',async e=>{
@@ -436,8 +443,9 @@ form.addEventListener('submit',async e=>{
   });
   form.reset();requestId=crypto.randomUUID();checkPhotos();feedback.classList.add('success');feedback.textContent='Your request is in. Zalmy will contact you to discuss your repair and price. Pickup and repairs will only be arranged after you approve.';
  }catch(error){feedback.classList.remove('success');feedback.textContent=error.message||'Unable to send. Please call or text 845-671-9979.';}
- finally{controls.forEach((el,i)=>el.disabled=previous[i]);setLeaseState();busy=false;submit.disabled=false;submit.textContent='GET MY REPAIR ESTIMATE';feedback.hidden=false;feedback.focus();}
+ finally{controls.forEach((el,i)=>el.disabled=previous[i]);setFormState();busy=false;submit.disabled=false;submit.textContent='GET MY REPAIR ESTIMATE';feedback.hidden=false;feedback.focus();}
 });
+setFormState();
 </script>
 </body>
 </html>
