@@ -1,4 +1,442 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="Affordable auto body work and paint repair. Your quote includes the required car wash, pickup, and return." /><title>Auto body work and repair for less | Rockland Body Concierge</title><link rel="icon" type="image/svg+xml" href="/rockland-body-concierge-site/favicon.svg" />  <script type="module" crossorigin src="/rockland-body-concierge-site/assets/index-83c03b180de8.js"></script>
-  <link rel="stylesheet" crossorigin href="/rockland-body-concierge-site/assets/index-ca2bc39621f3.css">
-</head><body><div id="root"></div></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/rockland-body-concierge-site/favicon.svg">
+<title>Rockland Body Concierge | Auto Body Repair Concierge, Rockland County NY</title>
+<meta name="description" content="Dented door or scraped bumper? Text Rockland Body Concierge a few photos and find out what your repair could cost through our concierge service. Rockland County, NY.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1a3a;
+    --ink:#1c2740;
+    --body:#3a4560;
+    --blue:#0a5cf5;
+    --blue-dark:#0847c4;
+    --blue-soft:#eaf1fe;
+    --panel:#f3f6fc;
+    --line:#d9e2f1;
+    --white:#ffffff;
+    --radius:10px;
+    --shadow:0 6px 24px rgba(11,26,58,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--body);background:var(--white);line-height:1.5;font-size:16px}
+  h1,h2,h3{font-family:Archivo,Inter,sans-serif;color:var(--navy);letter-spacing:-.02em;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  svg.i{width:1em;height:1em;flex:none}
+
+  /* Buttons */
+  .btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;border-radius:8px;transition:.15s ease;white-space:nowrap}
+  .btn-primary{background:var(--blue);color:#fff;padding:16px 30px;font-size:16px;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 4px 14px rgba(10,92,245,.3)}
+  .btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
+  .btn-primary svg{font-size:24px}
+  .btn-ghost{background:#fff;color:var(--blue-dark);border:1.5px solid var(--line);padding:14px 26px;font-size:20px;font-family:Archivo,sans-serif}
+  .btn-ghost:hover{border-color:var(--blue)}
+  .btn-sm.btn-primary{padding:12px 20px;font-size:13px}
+  .btn-sm.btn-ghost{padding:10px 18px;font-size:17px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand svg{width:86px;height:34px;color:var(--blue)}
+  .brand b{display:block;font-family:Archivo,sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.01em;line-height:1.1}
+  .brand small{font-size:13px;color:var(--ink)}
+  .nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-size:14px;font-weight:500;color:var(--ink)}
+  .nav ul a:hover{color:var(--blue)}
+  .nav .btn-primary{padding:10px 18px;font-size:14px;text-transform:none;letter-spacing:0}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f6f8fc 100%)}
+  .hero-art{position:absolute;inset:0 0 0 45%;background:
+     radial-gradient(ellipse at 70% 30%,#dfe8f5 0%,transparent 60%),
+     linear-gradient(160deg,#eef3fa 0%,#cfd9e8 55%,#b9c6d8 100%);}
+  .hero-art::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f6f8fc 0%,rgba(246,248,252,0) 30%);z-index:2}
+  .hero-art svg{position:absolute;right:-6%;bottom:-4%;width:105%;height:auto}
+  .hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;padding-top:40px;padding-bottom:44px;align-items:start}
+  .hero h1{font-size:clamp(38px,5vw,58px);font-weight:900;margin-bottom:16px}
+  .hero .lead{font-family:Archivo,sans-serif;font-weight:800;font-size:20px;color:var(--navy);margin-bottom:14px}
+  .hero p{font-size:16.5px;color:var(--ink);margin-bottom:12px;max-width:560px}
+  .hero .btns{margin-top:22px}
+  .fine{font-size:13.5px;font-style:italic;color:var(--body);margin-top:10px}
+  .contact-card{justify-self:end;background:#fff;border-radius:14px;padding:10px 10px 18px;box-shadow:0 16px 40px rgba(11,26,58,.18);width:250px;text-align:center}
+  .photo{aspect-ratio:1/1;border-radius:8px;background:linear-gradient(135deg,#e7ecf4,#cdd6e4);display:flex;align-items:center;justify-content:center;color:#7f8ca5;font-size:13px;overflow:hidden}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .contact-card p{margin:14px 0 2px;font-size:17px;font-weight:500;color:var(--navy)}
+  .contact-card a{display:inline-flex;align-items:center;gap:8px;font-family:Archivo,sans-serif;font-weight:800;color:var(--blue);font-size:24px}
+
+  /* Two panels */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 0;background:#fff}
+  .panel{background:var(--panel);padding:30px 34px 28px;display:grid;grid-template-columns:72px 1fr;gap:22px;border-radius:0 var(--radius) var(--radius) 0}
+  .panel + .panel{border-radius:var(--radius) 0 0 var(--radius)}
+  .badge{width:72px;height:72px;border-radius:50%;background:#dde7f8;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:36px}
+  .panel h2{font-size:24px;font-weight:800;margin-bottom:4px}
+  .panel h3{font-family:Inter,sans-serif;font-weight:600;font-size:17px;color:var(--navy);margin-bottom:12px;letter-spacing:0}
+  .panel p{font-size:14px;color:var(--ink);margin-bottom:10px}
+  .panel strong{color:var(--navy)}
+  .panel .btns{margin-top:12px}
+
+  /* Steps */
+  .steps{padding:42px 0 46px;border-bottom:1px solid var(--line)}
+  .steps h2{font-size:40px;font-weight:900;margin-bottom:24px}
+  .step-row{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr;align-items:center}
+  .chev{color:#7f8ca5;text-align:center;font-size:22px}
+  .step{border:1.5px solid var(--line);border-radius:var(--radius);padding:22px 20px 20px;display:grid;grid-template-columns:60px 1fr;gap:14px;height:100%;background:#fff}
+  .num{width:48px;height:48px;border-radius:50%;background:var(--blue-soft);color:var(--blue-dark);font-family:Archivo,sans-serif;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center}
+  .step .ico{font-size:36px;color:var(--navy);margin-bottom:8px}
+  .step h3{font-size:17px;font-weight:800;margin-bottom:10px}
+  .step p{font-size:13.5px;color:var(--ink);margin-bottom:8px}
+
+  /* Big statement */
+  .statement{position:relative;overflow:hidden;background:#fff}
+  .statement-art{position:absolute;inset:0 0 0 52%;background:linear-gradient(170deg,#e8edf5 0%,#c7d2e2 60%,#a9b8cc 100%)}
+  .statement-art::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 35%);z-index:2}
+  .statement-art svg{position:absolute;right:0;bottom:0;height:100%;width:auto}
+  .statement .wrap{position:relative;z-index:3;padding-top:38px;padding-bottom:40px}
+  .statement h2{font-size:clamp(28px,3.4vw,36px);font-weight:900}
+  .statement h2 span{display:block;color:var(--blue)}
+  .statement .copy{max-width:520px;margin-top:14px}
+  .statement p{font-size:15px;color:var(--ink);margin-bottom:10px}
+  .statement .btns{margin-top:18px}
+
+  /* Gallery */
+  .gallery{padding:34px 0 36px;border-top:1px solid var(--line)}
+  .gallery h2{font-size:38px;font-weight:900;margin-bottom:18px}
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .ba{border:1.5px solid var(--line);border-radius:var(--radius);padding:14px 14px 16px}
+  .ba h3{font-family:Inter,sans-serif;font-size:15px;font-weight:700;letter-spacing:0;color:var(--navy)}
+  .ba > p{font-size:14px;color:var(--ink);margin-bottom:10px}
+  .ba-row{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center}
+  .slot{aspect-ratio:2.6/1;background:#d9dee6;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#8a95a8;font-size:15px;letter-spacing:.05em;overflow:hidden}
+  .slot svg{font-size:30px}
+  .slot img{width:100%;height:100%;object-fit:cover}
+  .ba-row .arrow{text-align:center;color:#7f8ca5;font-size:20px}
+
+  /* Final CTA */
+  .final{padding:0 0 40px}
+  .final .box{background:var(--panel);border-radius:14px;padding:28px 34px;display:grid;grid-template-columns:1fr 280px;gap:30px;align-items:center}
+  .final h2{font-size:clamp(26px,3vw,32px);font-weight:900}
+  .final h2 span{display:block;color:var(--blue)}
+  .final p{font-size:14.5px;color:var(--ink);margin-top:10px}
+  .final .stack{display:flex;flex-direction:column;gap:8px;text-align:center}
+  .final .stack .btn{width:100%}
+  .final .stack small{font-style:italic;font-size:13px}
+
+  footer{border-top:1px solid var(--line);padding:22px 0;font-size:13px;color:#6b7690;text-align:center}
+
+  /* Responsive */
+  @media (max-width:960px){
+    .nav ul li:not(:last-child){display:none}
+    .hero .wrap{grid-template-columns:1fr}
+    .hero-art{inset:auto 0 0 0;height:300px;opacity:.6}
+    .contact-card{justify-self:start;display:grid;grid-template-columns:110px 1fr;gap:14px;width:100%;max-width:420px;text-align:left;align-items:center;padding:10px}
+    .contact-card p{margin-top:0}
+    .duo{grid-template-columns:1fr}
+    .panel,.panel + .panel{border-radius:var(--radius)}
+    .step-row{grid-template-columns:1fr;gap:12px}
+    .chev{transform:rotate(90deg)}
+    .statement-art{opacity:.35;inset:0}
+    .ba-grid{grid-template-columns:1fr}
+    .final .box{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 16px}
+    .brand svg{width:56px}
+    .brand b{font-size:17px}
+    .brand small{font-size:11.5px}
+    .panel{grid-template-columns:1fr;padding:24px 20px}
+    .btns .btn{width:100%}
+    .steps h2,.gallery h2{font-size:32px}
+  }
+.repair-frames{display:grid;grid-template-columns:1.85fr 1fr;gap:18px;align-items:stretch}.collage-frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#edf1f6;padding:10px}.frame-heading{display:flex;justify-content:space-between;align-items:center;padding:5px 3px 13px;font-size:13px;font-weight:800;letter-spacing:1px}.frame-heading span{font-size:11px;letter-spacing:0;font-weight:400;color:var(--body)}.damage-collage{display:grid;grid-template-columns:.9fr 1fr 1fr;grid-template-rows:repeat(3,155px);gap:7px}.damage-tile{display:block;position:relative;overflow:hidden;border-radius:5px;background:#17202a;container-type:size}.damage-tile img{width:100%;height:100%;object-fit:cover;display:block}.damage-main{grid-row:span 3}.damage-main img{object-position:center top}.sideways img{position:absolute;width:100cqh;height:100cqw;max-width:none;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);object-fit:contain}.screenshot-tile img{object-fit:cover;transform:translate(-50%,-50%) rotate(-90deg) scale(1.36)}.after-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:7px;height:479px}.after-tile{display:block;position:relative;min-height:0;overflow:hidden;border-radius:5px;background:#e3e8ef}.after-tile img{display:block;width:100%;height:100%;object-fit:contain}.after-tile span{position:absolute;bottom:8px;left:8px;background:#fff;padding:3px 8px;font-size:11px;border-radius:4px;color:var(--ink)}.gallery-tip{font-size:12px;margin:8px 0 0;color:var(--body)}
+@media(max-width:800px){.repair-frames{grid-template-columns:1fr}.damage-collage{grid-template-rows:repeat(3,150px)}.after-collage{grid-template-columns:repeat(4,1fr);grid-template-rows:1fr;height:280px}}
+@media(max-width:480px){.repair-frames{gap:12px}.collage-frame{padding:7px}.frame-heading{font-size:12px}.frame-heading span{font-size:10px}.damage-collage{grid-template-columns:.9fr 1fr;grid-template-rows:repeat(4,130px);gap:5px}.damage-main{grid-row:span 2}.after-collage{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:460px;gap:5px}}
+
+.contact-card{padding:22px 18px;align-self:start}.contact-card .contact-action{display:inline;font-family:inherit;font-size:inherit;font-weight:600;color:var(--blue)}.contact-card p{margin:0 0 8px}.btn{white-space:normal;text-align:center}html{scroll-padding-top:90px}a:focus-visible{outline:3px solid #8bb5ff;outline-offset:4px}.gallery-tip{margin-top:10px}.hero .fine{font-size:13.5px}@media(max-width:960px){.contact-card{display:block;width:auto;max-width:100%;padding:16px 20px}}@media(max-width:560px){.nav{height:auto;min-height:76px;gap:10px;padding-top:12px;padding-bottom:12px}.nav .btn-primary{padding:9px 12px;font-size:12px}.brand{gap:8px}.brand b{font-size:15px}.brand small{font-size:10px}.brand svg{width:42px;flex-shrink:0}.hero-art{opacity:.2}.hero .wrap{gap:20px}}
+.estimate-section{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:35px 0}.estimate-section .form-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:42px;align-items:start}.estimate-section .form-intro{position:sticky;top:25px}.estimate-section .form-intro h2{font-size:32px}.estimate-section .form-intro a{color:var(--blue);font-weight:700}.estimate-section .form-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:27px}.estimate-section .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.estimate-section .vehicle-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.estimate-section .field{margin-bottom:16px}.estimate-section .grid .field,.estimate-section .vehicle-grid .field{margin:0}.estimate-section label,.estimate-section .field-label,.estimate-section legend{display:block;font-size:14px;font-weight:600;margin:0 0 7px;color:var(--ink)}.estimate-section .optional{font-size:12px;color:var(--body);font-weight:400}.estimate-section input[type=text],.estimate-section input[type=tel],.estimate-section input[type=number],.estimate-section textarea{display:block;width:100%;padding:10px 12px;border:1px solid #cfd8e5;border-radius:6px;background:white;font:inherit;font-size:14px;min-height:42px}.estimate-section textarea{resize:vertical;min-height:78px}.estimate-section fieldset{border:0;padding:0;margin:16px 0}.estimate-section .status{display:flex;gap:10px;flex-wrap:wrap}.estimate-section .status label{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-weight:400;margin:0}.estimate-section .status input{accent-color:var(--blue)}.estimate-section .separator{height:1px;background:var(--line);margin:21px 0}.estimate-section .upload{border:1px dashed #acbcd4;border-radius:8px;padding:15px;background:#fafcff}.estimate-section .upload input{font:inherit;font-size:13px;max-width:100%}.estimate-section .upload input::file-selector-button{background:#eaf0fe;border:0;border-radius:5px;padding:9px 12px;color:#1d4cac;font-weight:700;cursor:pointer;margin-right:8px}.estimate-section .upload.dragging{background:#eaf0fe;border-color:var(--blue)}.estimate-section .upload .note{font-size:11px;margin-top:8px}.estimate-section .photo-preview{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.estimate-section .photo-preview img{width:70px;height:60px;object-fit:cover;border-radius:5px}.estimate-section .form-card .btn{width:100%;margin:5px 0 8px}.estimate-section .privacy{text-align:center;font-size:11px;line-height:1.5;margin:5px 0}.estimate-section .error{color:#ac2323;font-size:13px}.estimate-section .preview-feedback{padding:14px;background:#eaf0fe;color:#234779;border-radius:7px;font-size:14px;margin-top:14px}
+[hidden]{display:none!important}
+.estimate-section{margin:0 0 40px;padding:48px 0}
+.estimate-section .form-intro{top:100px}
+.estimate-section .form-intro p{margin:14px 0}
+.estimate-section .form-card{min-width:0}
+.estimate-section .preview-feedback{margin:0 0 22px;line-height:1.6}
+.estimate-section .preview-feedback a{text-decoration:underline}
+.estimate-section .btn{border:0;cursor:pointer;font-family:inherit}
+.estimate-section .privacy{margin-top:10px}
+.estimate-section .privacy a{color:var(--blue-dark);text-decoration:underline}
+.estimate-section input:focus-visible,.estimate-section textarea:focus-visible,.estimate-section button:focus-visible{outline:3px solid #8bb5ff;outline-offset:3px}
+.estimate-section .status input{width:18px;height:18px}
+@media(max-width:800px){.estimate-section .form-layout{grid-template-columns:1fr;gap:24px}.estimate-section .form-intro{position:static}.estimate-section .form-card{padding:22px}}
+@media(max-width:480px){.estimate-section .grid,.estimate-section .vehicle-grid{grid-template-columns:1fr}.estimate-section .form-card{padding:18px}.estimate-section .form-intro h2{font-size:28px}}
+
+.honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.estimate-section button:disabled{opacity:.65;cursor:wait}.estimate-section .preview-feedback.success{background:#e8f5eb;color:#194c29}
+</style>
+</head>
+<body>
+
+<!-- Reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.6 3.4 6.1-.2 1.4-.9 2.8-2 3.9 2.2 0 4.2-.8 5.6-1.9 1 .3 2 .4 3 .4 5.5 0 10-3.6 10-8S17.5 3 12 3z"/><circle cx="8" cy="11" r="1.3" fill="#fff"/><circle cx="12" cy="11" r="1.3" fill="#fff"/><circle cx="16" cy="11" r="1.3" fill="#fff"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></symbol>
+  <symbol id="img" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="9.5" r="1.8" fill="currentColor"/><path d="M4 18l5-5 3 3 3-4 5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Rockland Body Concierge home">
+      <svg viewBox="0 0 90 34" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24v-5c0-2 1-3 3-3.5l9-1.5 9-7c1.5-1 3-1.5 5-1.5h22c2 0 3.5.5 5 1.5l9 7 10 1.5c2 .3 3 1.5 3 3.5v5"/><path d="M28 14h40M48 7v7"/><circle cx="20" cy="25" r="5"/><circle cx="70" cy="25" r="5"/><path d="M25 25h40M2 25h13M75 25h12"/></svg>
+      <span><b>ROCKLAND BODY CONCIERGE</b><small>Auto Body Repair Concierge · Rockland County, NY</small></span>
+    </a>
+    <ul>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#why">Why It Costs Less</a></li>
+      <li><a href="#examples">Examples</a></li>
+      <li><a class="btn btn-primary" href="#estimate">Get an Estimate</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 800 460">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfcfe"/><stop offset=".55" stop-color="#e3e9f2"/><stop offset="1" stop-color="#aab7c9"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5d6c84"/><stop offset="1" stop-color="#1d273a"/></linearGradient>
+        </defs>
+        <ellipse cx="430" cy="440" rx="420" ry="22" fill="#7f8ca5" opacity=".35"/>
+        <path d="M40 380 C40 330 70 300 140 285 L260 260 C320 190 400 140 520 128 L700 124 C760 124 800 150 820 200 L820 420 L80 420 C55 420 40 405 40 380Z" fill="url(#body)"/>
+        <path d="M285 258 C340 200 410 165 520 155 L690 152 C730 152 760 175 780 210 L620 238 Z" fill="url(#glass)"/>
+        <path d="M60 330 L300 300 L820 290" stroke="#c4cedd" stroke-width="3" fill="none"/>
+        <circle cx="230" cy="405" r="62" fill="#1d2433"/><circle cx="230" cy="405" r="38" fill="#8a96a8"/><circle cx="230" cy="405" r="12" fill="#2a3242"/>
+        <path d="M70 340 L140 335 L130 352 L68 356Z" fill="#f2f5fa" stroke="#9aa8bb"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <div>
+        <h1>Dents and Bends Can Get Expensive Fast.</h1>
+        <p class="lead">Before you pay thousands to repair it, send us a few photos.</p>
+        <p>A dented door. A scraped bumper. Damage to a body panel. The damage itself might not look terrible. Then you get the repair quote. That's usually the painful part.</p>
+        <p>Rockland Body Concierge helps local drivers find a more affordable way to get exterior body damage repaired properly.</p>
+        <p>Send us a few photos of the damage. We'll take a look and tell you what we may be able to get it repaired for.</p>
+        <p>You may find the difference is substantial.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#estimate"><svg class="i"><use href="#img"/></svg>Get My Repair Estimate</a>
+          <a class="btn btn-ghost" href="tel:+18456719979">845-671-9979</a>
+        </div>
+        <p class="fine">Upload photos using the form below, or <a href="sms:+18456719979" style="color:var(--blue);font-weight:700;text-decoration:underline">text Zalmy at 845-671-9979</a>.</p>
+        <p class="fine">No obligation. No shop visit needed to get started.</p>
+      </div>
+      <aside class="contact-card">
+        <div>
+          <p><a class="contact-action" href="tel:+18456719979">Call</a> or <a class="contact-action" href="sms:+18456719979">text</a> Zalmy</p>
+          <a href="tel:+18456719979"><svg class="i"><use href="#phone"/></svg>845-671-9979</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TWO PANELS -->
+  <section class="duo" id="why">
+    <div class="panel">
+      <div class="badge" aria-hidden="true">
+        <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M14 7h3M14 11h3M8 15h9M8 18h6"/><path d="M10.5 6.5c-.4-.6-1-.9-1.7-.9-1 0-1.6.6-1.6 1.3 0 1.8 3.4 1 3.4 2.8 0 .7-.7 1.3-1.7 1.3-.8 0-1.4-.3-1.8-.9M8.8 5v1M8.8 11v1"/></svg>
+      </div>
+      <div>
+        <h2>Already Have an Expensive Quote?</h2>
+        <h3>Before you approve it, send it to us.</h3>
+        <p>Maybe you've already been to a body shop. Maybe the dealership gave you a number. And maybe you looked at the estimate and thought: "For that?"</p>
+        <p>Don't approve it just because it's the first number you received.</p>
+        <p><strong>Send us:<br>A few photos of the damage + the estimate you received.</strong></p>
+        <p>We'll look at both and tell you what we may be able to get the repair done for through our concierge service.</p>
+        <p>If there's a meaningfully more affordable option, you'll know. If there isn't, we'll tell you that too. Then you decide.</p>
+        <div class="btns">
+          <a class="btn btn-primary btn-sm" href="sms:+18456719979"><svg class="i"><use href="#chat"/></svg>Send Us Your Photos + Quote</a>
+          <a class="btn btn-ghost btn-sm" href="tel:+18456719979">845-671-9979</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="badge" aria-hidden="true">
+        <svg class="i" viewBox="0 0 24 24"><path fill="currentColor" d="M19.4 13a7.5 7.5 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.3 7.3 0 0 0-1.7-1L15 3.3h-4l-.4 2.6a7.3 7.3 0 0 0-1.7 1l-2.5-1-2 3.5L6.5 11a7.5 7.5 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.6h4l.4-2.6c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5L19.4 13zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg>
+      </div>
+      <div>
+        <h2>Why Can It Cost Less?</h2>
+        <p>Traditional body repair can come with costs that have little to do with the damage you're looking at.</p>
+        <p>Our concierge model takes a different approach. We evaluate the actual repair needed and coordinate the work with a focus on getting the vehicle repaired properly at a more reasonable cost.</p>
+        <p>That can make a significant difference on the right repair.</p>
+        <p>Not every job will be dramatically cheaper. And we're not going to invent a savings number before seeing your car.</p>
+        <p>Send us the damage first. Then we can tell you what your option actually looks like.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps" id="how">
+    <div class="wrap">
+      <h2>Three Steps.</h2>
+      <div class="step-row">
+        <div class="step">
+          <div class="num">01</div>
+          <div>
+            <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+            <h3>Show Us the Damage</h3>
+            <p>Take a few clear photos from different angles and text them to us.</p>
+            <p>Already have an expensive estimate? Send that too.</p>
+          </div>
+        </div>
+        <div class="chev" aria-hidden="true">›</div>
+        <div class="step">
+          <div class="num">02</div>
+          <div>
+            <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M14 21H5V3h10l4 4v5"/><path d="M8 8h6M8 12h4"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div>
+            <h3>See What We Can Do It For</h3>
+            <p>We'll evaluate the damage and tell you what we may be able to get the repair done for.</p>
+            <p>Compare that with the number you already have—or the number you were expecting.</p>
+            <p>Some repairs may require an in-person inspection before final pricing.</p>
+          </div>
+        </div>
+        <div class="chev" aria-hidden="true">›</div>
+        <div class="step">
+          <div class="num">03</div>
+          <div>
+            <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><path d="M2 9l4-3 3 1 3-2 3 1 2-1 5 4-3 3"/><path d="M6 6l-3 6 3 2M9 7l-3 4c1 1 2 1 3 0l2-2 5 5c.6.6.6 1.4 0 2s-1.4.6-2 0M14 16c.6.6.6 1.4 0 2s-1.4.6-2 0l-1-1M12 18c-.5.5-1.3.5-1.8 0L9 17"/></svg></div>
+            <h3>Decide If It Makes Sense</h3>
+            <p>Like the price? We'll coordinate the repair.</p>
+            <p>Local vehicle pickup and return are available throughout Rockland County, subject to availability.</p>
+            <p>Don't like the price? Don't move forward.</p>
+            <p>It really can be that simple.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <div class="statement-art" aria-hidden="true">
+      <svg viewBox="0 0 500 300" preserveAspectRatio="xMaxYMax slice">
+        <defs><linearGradient id="door" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8e0eb"/><stop offset="1" stop-color="#7e8ca1"/></linearGradient></defs>
+        <path d="M60 300 C80 200 120 120 220 70 L500 20 L500 300Z" fill="url(#door)"/>
+        <path d="M150 140 C200 95 260 70 340 60 L500 50 L500 110 L180 150Z" fill="#2c3648" opacity=".85"/>
+        <path d="M250 200 L330 195" stroke="#5a687e" stroke-width="10" stroke-linecap="round"/>
+        <path d="M110 230 C200 215 350 205 500 200" stroke="#eef2f8" stroke-width="2" fill="none"/>
+        <path d="M95 175 L60 168 L55 190 L92 196Z" fill="#3a4558"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <h2>What Looks Like a $4,000 Problem…<span>Might not need a $4,000 bill.</span></h2>
+      <div class="copy">
+        <p>That's the reason Rockland Body Concierge exists.</p>
+        <p>When people see body damage, they often assume an expensive repair is coming. Sometimes they're right. Sometimes there's a much more reasonable way to get the car looking right again. You won't know from staring at the dent.</p>
+        <p><strong style="color:var(--navy)">Send us a photo instead.</strong></p>
+        <div class="btns">
+          <a class="btn btn-primary" href="sms:+18456719979"><svg class="i"><use href="#chat"/></svg>Text Us Your Photos</a>
+          <a class="btn btn-ghost" href="tel:+18456719979">845-671-9979</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="examples">
+    <div class="wrap">
+      <h2>See What We've Repaired.</h2>
+<div class="repair-frames"><div class="collage-frame"><div class="frame-heading">BEFORE <span>7 views of the damage</span></div><div class="damage-collage"><a class="damage-tile damage-main" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front bumper impact and displaced bodywork"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" alt="Front bumper impact and displaced bodywork" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wide.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Wider view of the damaged front bumper and hood"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wide.jpg" alt="Wider view of the damaged front bumper and hood" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-door-wide.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Wide view of side-door dents and scrapes"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-door-wide.jpg" alt="Wide view of side-door dents and scrapes" loading="lazy" width="709" height="1536"></a><a class="damage-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-before-upper-body.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Upper body and window-area damage"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-upper-body.jpg" alt="Upper body and window-area damage" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways screenshot-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-context.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front-corner damage shown in the original video screenshot"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-context.jpg" alt="Front-corner damage shown in the original video screenshot" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wheel.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front bumper separation beside the wheel"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wheel.jpg" alt="Front bumper separation beside the wheel" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-door-close.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Close-up of deep lower-door dents"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-door-close.jpg" alt="Close-up of deep lower-door dents" loading="lazy" width="709" height="1536"></a></div></div><div class="collage-frame"><div class="frame-heading">AFTER <span>Repaired bodywork</span></div><div class="after-collage"><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-front-full.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-front-full.webp" alt="Polestar 2 full front after repair, extracted from the post-repair video" loading="lazy"><span>Full front</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" alt="Polestar 2 bumper detail after repair, extracted from the post-repair video" loading="lazy"><span>Bumper detail</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-front-corner.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-front-corner.webp" alt="Polestar 2 front corner after repair, extracted from the post-repair video" loading="lazy"><span>Front corner</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" alt="Polestar 2 side panel after repair, extracted from the post-repair video" loading="lazy"><span>Side panel</span></a></div></div></div><p class="gallery-tip">Tap any photo to enlarge.</p>
+    </div>
+  </section>
+
+<section class="estimate-section" id="estimate"><div class="form-layout wrap"><div class="form-intro"><h2>GET YOUR REPAIR ESTIMATE</h2><p><strong>Upload a few photos. We'll respond the same day.</strong></p><p class="note">No obligation. Rockland County drivers only.</p><p class="note">Questions? <a href="tel:+18456719979">Call</a> or <a href="sms:+18456719979">text</a> Zalmy at <a href="tel:+18456719979">845-671-9979</a></p></div><form class="form-card" id="estimate-form" onsubmit="return false">
+<noscript><p>Please enable JavaScript to send this form, or call/text Zalmy at 845-671-9979.</p></noscript><div class="grid"><div class="field"><label for="name">Name*</label><input id="name" name="name" type="text" autocomplete="name" required maxlength="100"></div><div class="field"><label for="estimate-phone">Phone*</label><input id="estimate-phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30"></div></div><div class="field" style="margin-top:16px"><label for="town">Town / ZIP*</label><input id="town" name="town" type="text" autocomplete="address-level2" required maxlength="100"></div><div class="field-label">Vehicle Year / Make / Model*</div><div class="vehicle-grid"><div class="field"><label class="optional" for="year">Year</label><input id="year" name="year" type="number" min="1900" max="2027" required placeholder="2024"></div><div class="field"><label class="optional" for="make">Make</label><input id="make" name="make" type="text" required maxlength="80" placeholder="Toyota"></div><div class="field"><label class="optional" for="model">Model</label><input id="model" name="model" type="text" required maxlength="80" placeholder="Camry"></div></div><div class="field" style="margin-top:16px"><label for="trim">Trim <span class="optional">(Optional)</span></label><input id="trim" name="trim" type="text" placeholder="SE, SEL, Limited" maxlength="80"></div>
+<fieldset><legend>Vehicle Status</legend><div class="status"><label><input type="radio" name="vehicleStatus" value="owned">Owned</label><label><input type="radio" name="vehicleStatus" value="financed">Financed</label><label><input type="radio" name="vehicleStatus" value="leased">Leased</label></div></fieldset><div class="field" id="lease-field" hidden><label for="leaseRemaining">If leased, how much time is left?</label><input id="leaseRemaining" disabled name="leaseRemaining" type="text" placeholder="e.g. 6 months" maxlength="80"></div><div class="field"><label for="damage">Tell us about the damage*</label><textarea id="damage" name="damage" required minlength="5" maxlength="2700"></textarea></div>
+<fieldset><legend>Can the car be driven?*</legend><div class="status"><label><input type="radio" name="drivable" value="yes" required>Yes</label><label><input type="radio" name="drivable" value="no">No</label><label><input type="radio" name="drivable" value="unsure">Not sure</label></div></fieldset><div class="field"><label for="photos">Upload Photos*</label><div class="upload" id="photo-zone"><input id="photos" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple required aria-describedby="photo-help"><p class="note" id="photo-help">Choose photos or drag them here.<br>JPG, PNG, or WebP · Up to 6 photos · 5 MB each · 20 MB total</p><div class="photo-preview" id="photo-preview"></div></div></div><fieldset><legend>Already have a repair estimate?*</legend><div class="status"><label><input type="radio" name="hasQuote" value="yes" required>Yes</label><label><input type="radio" name="hasQuote" value="no">No</label></div></fieldset><div class="field"><label for="existingEstimate">Already have an estimate? <span class="optional">(Optional)</span></label><div class="upload"><input id="existingEstimate" name="existingEstimate" type="file" accept="image/jpeg,image/png,image/webp"><p class="note">Upload a photo or screenshot of your estimate (JPG, PNG, or WebP). Up to 6 images and 20 MB total across both uploads; 5 MB per image.</p></div></div><div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><p id="file-error" class="error" role="alert" hidden></p><button class="btn btn-primary" type="submit">GET MY REPAIR ESTIMATE</button><p class="privacy"><strong>No obligation. Your information and photos are used to review your request and coordinate your repair. Submitting does not schedule pickup or authorize work.</strong></p><p class="privacy">Questions? <a href="tel:+18456719979">Call</a> or <a href="sms:+18456719979">text</a> Zalmy at <a href="tel:+18456719979">845-671-9979</a><br><em>Rockland County drivers only.</em></p><div class="preview-feedback" id="submit-feedback" role="status" tabindex="-1" hidden></div>
+</form></div></section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2>Before You Pay the Body Shop Price…<span>Find out what your other option costs.</span></h2>
+          <p>No driving from shop to shop. No obligation to use us. No need to understand bodywork. Take a few photos of the damage. Text them to us. We'll tell you whether we can help—and what we may be able to get the repair done for. Then you can decide whether that expensive quote still makes sense.</p>
+        </div>
+        <div class="stack">
+          <a class="btn btn-primary" href="#estimate">Get My Repair Estimate</a>
+          <a class="btn btn-primary" href="sms:+18456719979"><svg class="i"><use href="#chat"/></svg>Text Us Your Photos</a>
+          <a class="btn btn-ghost" href="tel:+18456719979">845-671-9979</a>
+          <small>A lower-cost repair could be a few photos away.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Rockland Body Concierge · Rockland County, NY · <a href="tel:+18456719979">845-671-9979</a> · <a href="https://rockland-body-backend.zalmy-c63.workers.dev/owner">Owner Sign In</a></div>
+</footer>
+
+<script>
+const form=document.getElementById('estimate-form'),photos=document.getElementById('photos'),estimate=document.getElementById('existingEstimate'),fileError=document.getElementById('file-error'),previews=document.getElementById('photo-preview'),feedback=document.getElementById('submit-feedback'),submit=form.querySelector('button[type="submit"]');
+const allowedTypes=['image/jpeg','image/png','image/webp'];
+let previewUrls=[],busy=false,requestId=crypto.randomUUID();
+document.getElementById('year').max=String(new Date().getFullYear()+1);
+function setLeaseState(){const leased=form.elements.vehicleStatus.value==='leased';document.getElementById('lease-field').hidden=!leased;document.getElementById('leaseRemaining').disabled=!leased;}
+form.addEventListener('change',e=>{if(e.target.name==='vehicleStatus')setLeaseState();});
+function checkPhotos(){
+ const damageFiles=Array.from(photos.files),files=[...damageFiles,...Array.from(estimate.files)];
+ const invalid=files.length>6||files.some(f=>f.size>5*1024*1024||!allowedTypes.includes(f.type))||files.reduce((n,f)=>n+f.size,0)>20*1024*1024;
+ const message=invalid?'Choose up to 6 JPG, PNG, or WebP images in total, under 5 MB each and 20 MB combined.':'';
+ fileError.textContent=message;fileError.hidden=!invalid;photos.setCustomValidity(message);
+ previewUrls.forEach(URL.revokeObjectURL);previewUrls=[];previews.replaceChildren();
+ if(!invalid)damageFiles.forEach(f=>{const img=document.createElement('img'),url=URL.createObjectURL(f);previewUrls.push(url);img.src=url;img.alt='Selected damage photo';previews.append(img);});
+ return !invalid;
+}
+photos.addEventListener('change',checkPhotos);
+estimate.addEventListener('change',()=>{if(estimate.files.length)form.querySelector('[name="hasQuote"][value="yes"]').checked=true;checkPhotos();});
+const zone=document.getElementById('photo-zone');
+zone.addEventListener('dragover',e=>{e.preventDefault();if(!busy)zone.classList.add('dragging');});
+zone.addEventListener('dragleave',()=>zone.classList.remove('dragging'));
+zone.addEventListener('drop',e=>{e.preventDefault();zone.classList.remove('dragging');if(!busy){photos.files=e.dataTransfer.files;checkPhotos();}});
+const phone=document.getElementById('estimate-phone');
+phone.addEventListener('input',()=>phone.setCustomValidity(phone.value.replace(/\D/g,'').length<7?'Please enter a valid phone number.':''));
+function buildRequest(){
+ const data=new FormData();
+ for(const key of ['name','phone','town','year','make','model','drivable','hasQuote','website'])data.set(key,form.elements[key].value.trim());
+ data.set('email','');data.set('requestId',requestId);
+ const details=[form.elements.damage.value.trim()];
+ if(form.elements.trim.value.trim())details.push('Vehicle trim: '+form.elements.trim.value.trim());
+ if(form.elements.vehicleStatus.value)details.push('Vehicle status: '+form.elements.vehicleStatus.value);
+ if(form.elements.vehicleStatus.value==='leased'&&form.elements.leaseRemaining.value.trim())details.push('Lease time remaining: '+form.elements.leaseRemaining.value.trim());
+ if(estimate.files.length){data.set('hasQuote','yes');details.push('An existing repair estimate is attached as the final image.');}
+ data.set('damage',details.join('\n'));data.set('quoteAmount','');
+ Array.from(photos.files).forEach(file=>data.append('photos',file));
+ Array.from(estimate.files).forEach(file=>data.append('photos',file));
+ return data;
+}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(busy||!checkPhotos()||!form.reportValidity())return;
+ const data=buildRequest();busy=true;submit.disabled=true;submit.textContent='Uploading…';feedback.hidden=true;
+ const controls=Array.from(form.querySelectorAll('input,textarea'));const previous=controls.map(el=>el.disabled);controls.forEach(el=>el.disabled=true);
+ try{
+  await new Promise((resolve,reject)=>{
+   const xhr=new XMLHttpRequest();xhr.open('POST','https://rockland-body-backend.zalmy-c63.workers.dev/api/requests');xhr.timeout=90000;
+   xhr.upload.onprogress=e=>{if(e.lengthComputable)submit.textContent=e.loaded===e.total?'Saving your request…':'Uploading '+Math.round(e.loaded/e.total*100)+'%';};
+   xhr.onerror=()=>reject(new Error('We could not connect. Your details are still here—please try again or call/text 845-671-9979.'));
+   xhr.ontimeout=()=>reject(new Error('That took longer than expected. Please retry; your details are still here.'));
+   xhr.onload=()=>{let result;try{result=JSON.parse(xhr.responseText);}catch{reject(new Error('We could not save your request. Please try again or call/text 845-671-9979.'));return;}if(xhr.status>=200&&xhr.status<300&&result.id)resolve();else reject(new Error(result.error||'We could not save your request. Please try again.'));};
+   xhr.send(data);
+  });
+  form.reset();requestId=crypto.randomUUID();checkPhotos();feedback.classList.add('success');feedback.textContent='Your request is in. Zalmy will contact you to discuss your repair and price. Pickup and repairs will only be arranged after you approve.';
+ }catch(error){feedback.classList.remove('success');feedback.textContent=error.message||'Unable to send. Please call or text 845-671-9979.';}
+ finally{controls.forEach((el,i)=>el.disabled=previous[i]);setLeaseState();busy=false;submit.disabled=false;submit.textContent='GET MY REPAIR ESTIMATE';feedback.hidden=false;feedback.focus();}
+});
+</script>
+</body>
+</html>
