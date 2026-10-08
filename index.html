@@ -179,6 +179,16 @@
 .repair-captions{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.repair-captions h3{font-size:20px;margin-bottom:8px}.repair-captions p{font-size:15px}@media(max-width:560px){.repair-captions{grid-template-columns:1fr;gap:18px}}
 .estimate-section input[type=date]{display:block;width:100%;padding:10px 12px;border:1px solid #cfd8e5;border-radius:6px;background:white;font:inherit;font-size:14px;min-height:42px}
 .benefit-list{list-style:none;margin:14px 0 18px;padding:0}.benefit-list li{font-size:14px;color:var(--navy);margin:9px 0}.panel .outcome{font-family:Archivo,sans-serif;font-weight:800;font-size:23px;margin:8px 0}.vehicle-title{font-size:25px;margin-bottom:22px}.repair-savings{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:28px}.repair-savings h3{font-size:22px;margin-bottom:12px}.repair-savings h2{color:var(--blue);font-size:clamp(28px,4vw,40px);margin-bottom:16px}.repair-savings p{margin:10px 0;color:var(--ink)}.repair-savings .savings-note{font-size:13px}.repair-savings .btns{margin-top:18px}.pickup-note{margin:18px 0 0;color:var(--ink)}.steps .btns{margin-top:18px}.estimate-section .form-intro h3{font-size:23px;margin:16px 0}footer p{margin-top:14px}.contact-card{width:270px}.contact-card p{max-width:none}@media(max-width:560px){.repair-savings{padding:20px}.contact-card{width:auto}}
+
+.volkswagen-repair{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.volkswagen-repair .vehicle-title{margin-bottom:8px}
+.volkswagen-repair > p{margin-bottom:18px;font-size:14px}
+.volkswagen-comparison{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.volkswagen-comparison figure{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#edf1f6;padding:10px;min-width:0}
+.volkswagen-comparison figcaption{padding:5px 3px 13px;font-size:13px;font-weight:800;letter-spacing:1px;color:var(--navy)}
+.volkswagen-comparison a{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden;border-radius:5px;background:#e3e8ef}
+.volkswagen-comparison img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){.volkswagen-comparison{grid-template-columns:1fr;gap:12px}}
 </style>
 </head>
 <body>
@@ -256,6 +266,16 @@
 <p><strong>Thousands of dollars saved on one repair.</strong></p><p>See the results for yourself.</p>
 <p class="savings-note"><em>Every vehicle and repair is different. Pricing and savings depend on the damage and repair required.</em></p>
 <div class="btns"><a class="btn btn-primary" href="#estimate">SEE WHAT MY REPAIR COULD COST</a></div></div>
+
+<article class="volkswagen-repair" aria-labelledby="volkswagen-title">
+<h3 class="vehicle-title" id="volkswagen-title">Volkswagen · Side-Panel Repair</h3>
+<p>Side-panel dents and scrapes before and after repair.</p>
+<div class="volkswagen-comparison">
+<figure><figcaption>BEFORE</figcaption><a href="/rockland-body-concierge-site/assets/repairs/volkswagen-before.webp" target="_blank" rel="noopener" aria-label="View full-size Volkswagen before repair photo"><img src="/rockland-body-concierge-site/assets/repairs/volkswagen-before.webp" alt="White Volkswagen before repair, showing dents and scrapes along the driver's side doors and lower body panels" width="1536" height="1167" loading="lazy" decoding="async"></a></figure>
+<figure><figcaption>AFTER</figcaption><a href="/rockland-body-concierge-site/assets/repairs/volkswagen-after.webp" target="_blank" rel="noopener" aria-label="View full-size Volkswagen after repair photo"><img src="/rockland-body-concierge-site/assets/repairs/volkswagen-after.webp" alt="White Volkswagen after repair, showing the repaired driver's side doors and lower body panels" width="1379" height="1536" loading="lazy" decoding="async"></a></figure>
+</div>
+<p class="gallery-tip">Tap either photo to view it full size.</p>
+</article>
 </div></section>
 <section class="steps" id="how"><div class="wrap"><h2>HOW IT WORKS</h2><div class="step-row">
 <div class="step"><div class="num">1</div><div><h3>UPLOAD YOUR PHOTOS</h3><p>Show us the damage and tell us about your vehicle.</p></div></div>
