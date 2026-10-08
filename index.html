@@ -189,6 +189,20 @@
 .volkswagen-comparison a{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden;border-radius:5px;background:#e3e8ef}
 .volkswagen-comparison img{display:block;width:100%;height:100%;object-fit:contain}
 @media(max-width:600px){.volkswagen-comparison{grid-template-columns:1fr;gap:12px}}
+
+.polestar-pairs{display:grid;gap:20px}
+.polestar-pair{border:1px solid var(--line);border-radius:12px;background:#edf1f6;padding:14px}
+.polestar-pair h3{font-family:Inter,sans-serif;font-size:17px;letter-spacing:0;margin:2px 2px 14px}
+.polestar-pair-images{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.polestar-pair figure{min-width:0}
+.polestar-pair figcaption{font-size:12px;font-weight:800;letter-spacing:1px;color:var(--navy);margin:0 0 8px}
+.polestar-pair a{display:block;aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:#dde4ed}
+.polestar-pair img{display:block;width:100%;height:100%;object-fit:cover}
+.bumper-pair .before{object-position:center 35%}
+.bumper-pair .after{object-position:center 33%}
+.side-pair .before{object-position:center 65%}
+.side-pair .after{object-position:center 63%}
+@media(max-width:560px){.polestar-pair{padding:10px}.polestar-pair-images{gap:8px}.polestar-pair a{aspect-ratio:3/4}.polestar-pair h3{font-size:15px}.side-pair .before{object-position:60% center}}
 </style>
 </head>
 <body>
@@ -261,7 +275,21 @@
 </div></div></section>
 <section class="gallery" id="examples"><div class="wrap">
 <h2>REAL REPAIR. REAL SAVINGS.</h2><h3 class="vehicle-title">Polestar 2</h3>
-<div class="repair-frames"><div class="collage-frame"><div class="frame-heading">BEFORE</div><div class="damage-collage"><a class="damage-tile damage-main" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front bumper impact and displaced bodywork"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" alt="Front bumper impact and displaced bodywork" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wide.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Wider view of the damaged front bumper and hood"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wide.jpg" alt="Wider view of the damaged front bumper and hood" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-door-wide.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Wide view of side-door dents and scrapes"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-door-wide.jpg" alt="Wide view of side-door dents and scrapes" loading="lazy" width="709" height="1536"></a><a class="damage-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-before-upper-body.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Upper body and window-area damage"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-upper-body.jpg" alt="Upper body and window-area damage" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways screenshot-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-context.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front-corner damage shown in the original video screenshot"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-context.jpg" alt="Front-corner damage shown in the original video screenshot" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wheel.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Front bumper separation beside the wheel"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-wheel.jpg" alt="Front bumper separation beside the wheel" loading="lazy" width="709" height="1536"></a><a class="damage-tile sideways" href="/rockland-body-concierge-site/assets/repairs/polestar-before-door-close.jpg" target="_blank" rel="noopener" aria-label="Enlarge: Close-up of deep lower-door dents"><img src="/rockland-body-concierge-site/assets/repairs/polestar-before-door-close.jpg" alt="Close-up of deep lower-door dents" loading="lazy" width="709" height="1536"></a></div></div><div class="collage-frame"><div class="frame-heading">AFTER</div><div class="after-collage"><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-front-full.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-front-full.webp" alt="Polestar 2 full front after repair, extracted from the post-repair video" loading="lazy"><span>Full front</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" alt="Polestar 2 bumper detail after repair, extracted from the post-repair video" loading="lazy"><span>Bumper detail</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-after-front-corner.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-after-front-corner.webp" alt="Polestar 2 front corner after repair, extracted from the post-repair video" loading="lazy"><span>Front corner</span></a><a class="after-tile" href="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" target="_blank" rel="noopener"><img src="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" alt="Polestar 2 side panel after repair, extracted from the post-repair video" loading="lazy"><span>Side panel</span></a></div></div></div>
+<div class="polestar-pairs">
+<article class="polestar-pair bumper-pair" aria-labelledby="polestar-bumper-title">
+<h3 id="polestar-bumper-title">Front Bumper</h3>
+<div class="polestar-pair-images">
+<figure><figcaption>BEFORE</figcaption><a href="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" target="_blank" rel="noopener" aria-label="View full-size Polestar front bumper before repair"><img class="before" src="/rockland-body-concierge-site/assets/repairs/polestar-before-front-impact.jpg" alt="Polestar 2 front bumper before repair" width="709" height="1536" loading="lazy" decoding="async"></a></figure>
+<figure><figcaption>AFTER</figcaption><a href="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" target="_blank" rel="noopener" aria-label="View full-size Polestar front bumper after repair"><img class="after" src="/rockland-body-concierge-site/assets/repairs/polestar-after-bumper-detail.webp" alt="Polestar 2 front bumper after repair" width="720" height="1280" loading="lazy" decoding="async"></a></figure>
+</div></article>
+<article class="polestar-pair side-pair" aria-labelledby="polestar-side-title">
+<h3 id="polestar-side-title">Side Panel</h3>
+<div class="polestar-pair-images">
+<figure><figcaption>BEFORE</figcaption><a href="/rockland-body-concierge-site/assets/repairs/polestar-door-before.webp" target="_blank" rel="noopener" aria-label="View full-size Polestar side panel before repair"><img class="before" src="/rockland-body-concierge-site/assets/repairs/polestar-door-before.webp" alt="Polestar 2 side panel before repair" width="1536" height="709" loading="lazy" decoding="async"></a></figure>
+<figure><figcaption>AFTER</figcaption><a href="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" target="_blank" rel="noopener" aria-label="View full-size Polestar side panel after repair"><img class="after" src="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" alt="Polestar 2 side panel after repair" width="720" height="1280" loading="lazy" decoding="async"></a></figure>
+</div></article>
+</div>
+<p class="gallery-tip">Tap any photo to view it full size.</p>
 <div class="repair-savings"><h3>ABOUT $5,000 QUOTED ELSEWHERE.</h3><h2>COMPLETED FOR LESS THAN HALF.</h2>
 <p><strong>Thousands of dollars saved on one repair.</strong></p><p>See the results for yourself.</p>
 <p class="savings-note"><em>Every vehicle and repair is different. Pricing and savings depend on the damage and repair required.</em></p>
