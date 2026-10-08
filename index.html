@@ -203,6 +203,33 @@
 .side-pair .before{object-position:center 65%}
 .side-pair .after{object-position:center 63%}
 @media(max-width:560px){.polestar-pair{padding:10px}.polestar-pair-images{gap:8px}.polestar-pair a{aspect-ratio:3/4}.polestar-pair h3{font-size:15px}.side-pair .before{object-position:60% center}}
+
+/* Compact repair examples */
+.repair-case{border:1px solid var(--line);border-radius:12px;padding:22px;margin-top:20px;background:#fff}
+.repair-case .vehicle-title{font-size:23px;margin-bottom:16px}
+.repair-case-layout{display:grid;grid-template-columns:.9fr 1.25fr;gap:24px;align-items:start}
+.case-copy p{font-size:14px;line-height:1.55;margin-bottom:12px;color:var(--ink)}
+.case-copy .case-lead{font-size:16px;color:var(--navy)}
+.case-copy p:last-of-type{margin-bottom:0}
+.case-savings{font-size:14px;color:var(--blue-dark);background:var(--blue-soft);padding:12px 14px;border-radius:7px;margin-top:15px}
+.case-photos{min-width:0}
+.case-photos .polestar-pairs{grid-template-columns:1fr 1fr;gap:12px}
+.case-photos .polestar-pair{padding:9px}
+.case-photos .polestar-pair h3{font-size:13px;margin:1px 0 10px}
+.case-photos .polestar-pair-images{gap:6px}
+.case-photos .polestar-pair figcaption{font-size:10px;letter-spacing:.7px;margin-bottom:6px}
+.case-photos .polestar-pair a{aspect-ratio:auto;height:140px}
+.case-photos .side-pair .before{object-position:60% center}
+.case-photos .gallery-tip{font-size:11px;margin-top:8px}
+.jetta-pair{max-width:460px}
+.case-photos .jetta-pair a{height:160px}
+.case-photos .jetta-pair img{object-fit:cover}
+.case-photos .jetta-pair .polestar-pair-images figure:last-child img{object-position:center 68%}
+.gallery-disclaimer{font-size:12px;margin-top:18px}
+.gallery-cta{margin-top:16px}
+@media(max-width:960px){.repair-case-layout{grid-template-columns:1fr 1.2fr;gap:18px}.case-photos .polestar-pairs{grid-template-columns:1fr}.case-photos .polestar-pair a{height:125px}.case-photos .jetta-pair a{height:150px}}
+@media(max-width:640px){.repair-case{padding:16px}.repair-case-layout{grid-template-columns:1fr;gap:18px}.case-copy p{font-size:14px}.case-photos .polestar-pairs{grid-template-columns:1fr 1fr}.case-photos .polestar-pair a{height:120px}.case-photos .jetta-pair a{height:145px}.jetta-pair{max-width:none}}
+@media(max-width:420px){.case-photos .polestar-pairs{grid-template-columns:1fr}.case-photos .polestar-pair a{height:125px}}
 </style>
 </head>
 <body>
@@ -274,8 +301,19 @@
 </ul><h3 class="outcome">Your car gets fixed.</h3><h3 class="outcome">You keep more of your money.</h3>
 </div></div></section>
 <section class="gallery" id="examples"><div class="wrap">
-<h2>REAL REPAIR. REAL SAVINGS.</h2><h3 class="vehicle-title">Polestar 2</h3>
-<div class="polestar-pairs">
+<h2>REAL REPAIR. REAL SAVINGS.</h2>
+<article class="repair-case polestar-case" aria-labelledby="polestar-title">
+<h3 class="vehicle-title" id="polestar-title">Polestar 2</h3>
+<div class="repair-case-layout">
+<div class="case-copy">
+<p class="case-lead"><strong>Significant damage. Fully repaired.</strong></p>
+<p>The driver's door was dented and letting air into the cabin. Both the dent and air leak were completely fixed.</p>
+<p>A tree had bent the upper door frame. It was restored with no visible trace of the damage.</p>
+<p>The hood was bent, part of the bumper was split in two, the mirror was cracked and dislodged, and the lower body section had detached from the car.</p>
+<p><strong>All of it was fully repaired.</strong></p>
+<div class="case-savings"><strong>About $5,000 quoted elsewhere.<br>Completed for less than half.</strong></div>
+</div>
+<div class="case-photos"><div class="polestar-pairs">
 <article class="polestar-pair bumper-pair" aria-labelledby="polestar-bumper-title">
 <h3 id="polestar-bumper-title">Front Bumper</h3>
 <div class="polestar-pair-images">
@@ -289,21 +327,27 @@
 <figure><figcaption>AFTER</figcaption><a href="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" target="_blank" rel="noopener" aria-label="View full-size Polestar side panel after repair"><img class="after" src="/rockland-body-concierge-site/assets/repairs/polestar-door-after.webp" alt="Polestar 2 side panel after repair" width="720" height="1280" loading="lazy" decoding="async"></a></figure>
 </div></article>
 </div>
-<p class="gallery-tip">Tap any photo to view it full size.</p>
-<div class="repair-savings"><h3>ABOUT $5,000 QUOTED ELSEWHERE.</h3><h2>COMPLETED FOR LESS THAN HALF.</h2>
-<p><strong>Thousands of dollars saved on one repair.</strong></p><p>See the results for yourself.</p>
-<p class="savings-note"><em>Every vehicle and repair is different. Pricing and savings depend on the damage and repair required.</em></p>
-<div class="btns"><a class="btn btn-primary" href="#estimate">SEE WHAT MY REPAIR COULD COST</a></div></div>
-
-<article class="volkswagen-repair" aria-labelledby="volkswagen-title">
-<h3 class="vehicle-title" id="volkswagen-title">Volkswagen · Side-Panel Repair</h3>
-<p>Side-panel dents and scrapes before and after repair.</p>
-<div class="volkswagen-comparison">
+<p class="gallery-tip">Tap any photo to view it full size.</p></div>
+</div>
+</article>
+<article class="repair-case jetta-case" aria-labelledby="volkswagen-title">
+<h3 class="vehicle-title" id="volkswagen-title">Volkswagen Jetta</h3>
+<div class="repair-case-layout">
+<div class="case-copy">
+<p class="case-lead"><strong>Quoted over $4,000 elsewhere.<br>Repaired for close to half.</strong></p>
+<p>Dents and scrapes along the side panels were repaired for roughly half the quoted price.</p>
+</div>
+<div class="case-photos">
+<div class="jetta-pair polestar-pair"><h3>Side Panels</h3><div class="polestar-pair-images">
 <figure><figcaption>BEFORE</figcaption><a href="/rockland-body-concierge-site/assets/repairs/volkswagen-before.webp" target="_blank" rel="noopener" aria-label="View full-size Volkswagen before repair photo"><img src="/rockland-body-concierge-site/assets/repairs/volkswagen-before.webp" alt="White Volkswagen before repair, showing dents and scrapes along the driver's side doors and lower body panels" width="1536" height="1167" loading="lazy" decoding="async"></a></figure>
 <figure><figcaption>AFTER</figcaption><a href="/rockland-body-concierge-site/assets/repairs/volkswagen-after.webp" target="_blank" rel="noopener" aria-label="View full-size Volkswagen after repair photo"><img src="/rockland-body-concierge-site/assets/repairs/volkswagen-after.webp" alt="White Volkswagen after repair, showing the repaired driver's side doors and lower body panels" width="1379" height="1536" loading="lazy" decoding="async"></a></figure>
-</div>
+</div></div>
 <p class="gallery-tip">Tap either photo to view it full size.</p>
+</div>
+</div>
 </article>
+<p class="gallery-disclaimer"><em>Every vehicle and repair is different. Pricing and savings depend on the damage and repair required.</em></p>
+<div class="btns gallery-cta"><a class="btn btn-primary" href="#estimate">SEE WHAT MY REPAIR COULD COST</a></div>
 </div></section>
 <section class="steps" id="how"><div class="wrap"><h2>HOW IT WORKS</h2><div class="step-row">
 <div class="step"><div class="num">1</div><div><h3>UPLOAD YOUR PHOTOS</h3><p>Show us the damage and tell us about your vehicle.</p></div></div>
